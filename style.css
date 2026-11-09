@@ -1320,3 +1320,15 @@ textarea {
     .mode-icon { width: 49px; height: 49px; border-radius: 16px; }
     .mode-icon svg { width: 36px; height: 36px; }
 }
+
+/* V10: kawaii sticker icons, locally bundled for offline use */
+.mode-icon { width: 94px; height: 94px; background: transparent; border-radius: 0; margin-bottom: 0; }
+.mode-icon img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 5px 6px rgba(125, 101, 151, .10)); }
+.mode-card { min-height: 185px; }
+@media (max-width:650px) { .mode-icon { width: 70px; height: 70px; } .mode-card { min-height: 155px; } }
+
+/* V11: compact independent audio controls */
+.prompt-audio,.solution-audio { display:flex; justify-content:flex-end; }
+.prompt-audio .sound-button,.solution-audio .sound-button { font-size:12px; padding:7px 13px; min-height:34px; }
+.word-row > div:first-child { min-width:0; overflow-wrap:anywhere; }
+@media (max-width:480px) { .word-row { align-items:flex-start; } .word-row .sound-button { white-space:nowrap; } }
