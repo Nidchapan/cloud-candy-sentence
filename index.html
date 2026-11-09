@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="th">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#fff2f8" name="theme-color"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <link href="assets/header-cloud.png" rel="icon"/>
+  <link href="assets/header-cloud.png" rel="apple-touch-icon"/>
+  <link href="manifest.webmanifest" rel="manifest"/>
+  <link href="style.css" rel="stylesheet"/>
+  <title>
+   Cloud Candy &middot; Sentence Lab
+  </title>
+ </head>
+ <body>
+  <main class="app">
+   <header>
+    <button class="brand" id="homeBrand">
+     <img alt="" class="brand-logo" src="assets/header-cloud.png"/>
+     <span>
+      Cloud Candy
+      <small>
+       SENTENCE LAB
+      </small>
+     </span>
+    </button>
+    <span class="pill top-pill">
+     <span aria-hidden="true" class="tagline-sparkle">
+      ✦
+     </span>
+     little steps, big dreams
+    </span>
+   </header>
+   <section id="homeView">
+    <div class="hero">
+     <div class="hero-text">
+      <span class="eyebrow">
+       ✧ YOUR LITTLE ENGLISH GARDEN ✧
+      </span>
+      <h1>
+       Let's write
+       <br/>
+       <em>
+        something sweet!
+       </em>
+      </h1>
+      <p>
+       ฝึกแปลประโยคจากคำศัพท์จริงของ Cloud Candy ♡
+      </p>
+     </div>
+     <div class="hero-art hero-art-image">
+      <img alt="เมฆน้อยกับสายรุ้ง" src="assets/hero-cloud-rainbow.png"/>
+     </div>
+    </div>
+    <div class="section-head">
+     <h2>
+      Choose your path
+      <span>
+       ✿
+      </span>
+     </h2>
+    </div>
+    <div class="mode-grid">
+     <button class="mode-card mode-new" data-mode="th-en">
+      <span class="mode-icon">
+       <svg aria-hidden="true" fill="none" viewbox="0 0 48 48">
+        <rect fill="#FFFFFF" fill-opacity=".65" height="30" rx="10" width="34" x="7" y="9">
+        </rect>
+        <path d="M15 19h18M24 15v18M16 29l8-9 8 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">
+        </path>
+       </svg>
+      </span>
+      <strong>
+       Thai &rarr; English
+      </strong>
+      <span>
+       ฝึกแต่งประโยคภาษาอังกฤษ
+      </span>
+     </button>
+     <button class="mode-card mode-review" data-mode="en-th">
+      <span class="mode-icon">
+       <svg aria-hidden="true" fill="none" viewbox="0 0 48 48">
+        <rect fill="#FFFFFF" fill-opacity=".65" height="30" rx="10" width="34" x="7" y="9">
+        </rect>
+        <path d="M16 17h16M24 14v19M18 24l6 8 6-8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">
+        </path>
+       </svg>
+      </span>
+      <strong>
+       English &rarr; Thai
+      </strong>
+      <span>
+       ฝึกแปลและเข้าใจความหมาย
+      </span>
+     </button>
+     <button class="mode-card mode-known" data-mode="mixed">
+      <span class="mode-icon">
+       <svg aria-hidden="true" fill="none" viewbox="0 0 48 48">
+        <rect fill="#FFFFFF" fill-opacity=".65" height="30" rx="10" width="34" x="7" y="9">
+        </rect>
+        <path d="M13 19h21l-5-5m5 5-5 5M35 29H14l5-5m-5 5 5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7">
+        </path>
+       </svg>
+      </span>
+      <strong>
+       Mixed Translation
+      </strong>
+      <span>
+       สุ่มสลับทั้งสองภาษา
+      </span>
+     </button>
+     <button class="mode-card mode-all" data-mode="game">
+      <span class="mode-icon">
+       <svg aria-hidden="true" fill="none" viewbox="0 0 48 48">
+        <path d="M15 17h18c5 0 7 4 8 12 1 7-3 9-8 5l-5-4h-8l-5 4c-5 4-9 2-8-5 1-8 3-12 8-12Z" fill="#FFFFFF" fill-opacity=".72" stroke="currentColor" stroke-width="2.5">
+        </path>
+        <path d="M17 22v9m-4.5-4.5h9M31 24h.1M35 28h.1" stroke="currentColor" stroke-linecap="round" stroke-width="2.7">
+        </path>
+       </svg>
+      </span>
+      <strong>
+       Game Translation
+      </strong>
+      <span>
+       สุ่มบทสนทนาจากเกม
+      </span>
+     </button>
+    </div>
+    <p class="status" id="dataStatus" role="status">
+     กำลังโหลดข้อมูล&hellip;
+    </p>
+   </section>
+   <section hidden="" id="setupView">
+    <div class="game-top">
+     <button class="mini-button" id="setupHome">
+      ⌂ Home
+     </button>
+    </div>
+    <div class="settings-panel">
+     <span class="eyebrow">
+      ✧ CHOOSE YOUR PRACTICE ✧
+     </span>
+     <h2 id="setupTitle">
+      Thai &rarr; English
+     </h2>
+     <p class="muted" id="setupInfo">
+     </p>
+     <div id="vocabFilters">
+      <h3>
+       กลุ่มคำศัพท์
+      </h3>
+      <div class="bubble-options" id="memoryOptions">
+       <button class="choice active" data-memory="all">
+        🌈 All enabled
+       </button>
+       <button class="choice" data-memory="known">
+        ⭐ จำได้
+       </button>
+       <button class="choice" data-memory="unknown">
+        🌱 ยังจำไม่ได้
+       </button>
+      </div>
+      <h3>
+       Category
+      </h3>
+      <select class="select-field" id="categoryFilter">
+       <option value="all">
+        All categories
+       </option>
+      </select>
+     </div>
+     <h3>
+      จำนวนโจทย์
+     </h3>
+     <div class="bubble-options" id="countOptions">
+      <button class="choice active" data-count="10">
+       10
+      </button>
+      <button class="choice" data-count="25">
+       25
+      </button>
+      <button class="choice" data-count="35">
+       35
+      </button>
+      <button class="choice" data-count="all">
+       All
+      </button>
+     </div>
+     <button class="big-button" id="startBtn">
+      Start writing ♡
+     </button>
+     <p class="message" id="setupError">
+     </p>
+    </div>
+   </section>
+   <section hidden="" id="practiceView">
+    <div class="game-top">
+     <button class="mini-button" id="backHome">
+      ⌂ Home
+     </button>
+     <span class="progress-label" id="progressLabel">
+     </span>
+     <button class="mini-button" id="restartBtn">
+      &orarr; Restart
+     </button>
+    </div>
+    <div class="progress-track">
+     <div id="progressFill">
+     </div>
+    </div>
+    <div class="writing-card">
+     <div class="card-chips">
+      <span class="card-tag" id="categoryChip">
+      </span>
+      <span class="card-tag" id="memoryChip">
+      </span>
+      <span class="card-tag" id="posChip">
+      </span>
+     </div>
+     <div class="word-row">
+      <div>
+       <div class="eyebrow" id="directionLabel">
+       </div>
+       <h2 class="word" id="wordLabel">
+       </h2>
+       <div class="ipa" id="ipaLabel">
+       </div>
+      </div>
+      <button class="sound-button" id="speakBtn" type="button">
+       🔊 Listen
+      </button>
+     </div>
+     <div class="prompt">
+      <span id="promptTitle">
+      </span>
+      <p id="promptText">
+      </p>
+     </div>
+     <label class="answer-label" for="answer">
+      YOUR ANSWER ✎
+     </label>
+     <textarea id="answer" placeholder="Write your sentence here&hellip;" spellcheck="false"></textarea>
+     <div class="solution" hidden="" id="solution">
+      <strong>
+       ✧ EXAMPLE ANSWER ✧
+      </strong>
+      <p id="solutionText">
+      </p>
+      <small>
+       คำตอบอื่นอาจถูกต้องได้เช่นกัน
+      </small>
+     </div>
+    </div>
+    <div class="actionbar">
+     <button class="action secondary" id="revealBtn">
+      ♡ Reveal answer
+     </button>
+     <button class="action light" id="rewriteBtn">
+      ✎ Rewrite
+     </button>
+     <button class="action primary" id="nextBtn">
+      Next &rarr;
+     </button>
+    </div>
+   </section>
+   <section hidden="" id="finishView">
+    <div class="settings-panel finish">
+     <img alt="" src="assets/header-cloud.png"/>
+     <h2>
+      Sweet job! ♡
+     </h2>
+     <p id="finishText">
+     </p>
+     <button class="big-button" id="againBtn">
+      Play again ✨
+     </button>
+     <button class="mini-button" id="finishHome">
+      ⌂ Home
+     </button>
+    </div>
+   </section>
+   <footer>
+    made with ♡ &middot; pastel words, brighter days
+   </footer>
+  </main>
+  <script defer="" src="app.js">
+  </script>
+ </body>
+</html>
+
